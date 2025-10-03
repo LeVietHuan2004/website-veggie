@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('role_payments', function (Blueprint $table) {
+        Schema::create('contacts', function (Blueprint $table) {
             $table->id();
+            $table->string('full_name');
+            $table->string('phone_number');
+            $table->string('email')->unique();
+            $table->string('message');
+            $table->boolean('is_replies')->default(false);
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('role_payments');
+        Schema::dropIfExists('contacts');
     }
 };
