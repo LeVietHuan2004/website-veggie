@@ -3321,6 +3321,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     background-color: var(--ltn__secondary-color);
     border-color: var(--ltn__secondary-color);
     color: var(--white);
+    height: 65px;
     padding: 0 25px; }
     .ltn__newsletter-widget button:hover {
       background-color: var(--ltn__secondary-color-2);
